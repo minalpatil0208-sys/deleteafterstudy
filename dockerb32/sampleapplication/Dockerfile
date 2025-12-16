@@ -1,7 +1,7 @@
 
 FROM ubuntu:latest  
 #this is my base image on which deployment is done 
-LABEL author "dev anup"
+LABEL author="dev anup"
 #this is lavel to add metadata to image
 RUN apt-get update  && \ 
     apt-get install apache2 unzip -y 
@@ -21,6 +21,9 @@ EXPOSE 80
 #we are exposing port 80 to access our webapp
 
 CMD [ "apache2ctl", "-D",  "FOREGROUND" ] 
+
+
+
 
 
 
